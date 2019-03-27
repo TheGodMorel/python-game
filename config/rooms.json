@@ -1,19 +1,24 @@
 {
     "0": {
         "name": "Sala",
-        "description": "Questo luogo e' abbastanza accogliente nonostante il senso di claustrofobia che ti trasmette",
+        "description": "Sei nella camera principale della villa",
         "color": "white"
     },
 
     "1": {
-        "name": "Cucina",
-        "description": "E' tutto molto disordinato. Sembra che nessuno abbia riordinato da molto tempo",
-        "color": "red"
+        "name": "Stanza da letto",
+        "description": "Una semplice stanza spoglia con un letto e due armadi",
+        "color": "white"
     },
     
     "2": {
-        "name": "Sogno",
-        "description": "sei evidentemente in un sogno",
-        "color": "black"
+        "name": "Bagno",
+        "description": "Un bagno degno di una villa abbandonata",
+        "color": "cyan"
+    },
+    "3": {
+        "name": "Salotto",
+        "description": "Un salotto in cui nessuno mette piede da anni",
+        "color": "white"
     }
 }

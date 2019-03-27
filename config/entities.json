@@ -1,61 +1,32 @@
 {
-    "O": {
-        "name": "coccinella",
-        "color": "red",
-        "description": "che bella!",
+    "I": {
+        "name": "ingresso",
+        "color": "green",
+        "description": "La porta d'ingresso della villa",
         "interactions":  {
             "no-item": {
-                "message": "la schiacci",
-                "transform": " "
+                "message":"la apri lentamente accompagnato da un lungo stridio",
+                "move_to_room": 1
             }
         }
     },
-    "H": {
-        "name": "idrogeno",
-        "description": "e' dell'idrogeno, non chiedermi come fai a percepirlo...",
-        "color": "magenta",
-        "interactions": {
-            "no-item": {
-                "message": "ma scusa... cosa ti aspetti di fare esattamente con l'idrogeno..."
-            },
-            "L": {
-                "message": "opppero'! hai condito le lasagne con l'idrogeno sprigionando una reazione unicornosa",
-                "transform": "U"
-            }
-        }
-    },
-    "L": {
-        "name": "lasagne",
-        "description": "sembrano appetitose",
-        "color": "green",
-        "interactions": {
-            "no-item": {
-                "message": "fa sempre comodo avere delle lasagne in tasca",
-                "transform": " ",
-                "pickup": true
-            }
-        }
-    },
-    "B": {
-        "name": "bomba",
-        "description": "e' una bomba pronta a detonare, devo sbrigarmi a disinnescarla!",
+      
+      
+    "?": {
+        "name": "catena",
+        "description": "e' la porta d'ingresso alla villa ma e' stata chiusa con una catena di metallo",
         "color": "red",
         "interactions": {
             "no-item": {
-                "message": "biiiip biiiiiiip biiiiiiiiiiiip",
-                "game_over": "la bomba esplode demolendo l'intera stanza"
+                "message": "Non vedi nessun lucchetto in cui inserire una chiave"
             },
-
-            "V": {
-                "message": "tagli con attenzione un filo che penzola da un lato dell'ordigno...",
-                "win": "hai disinnescato la bomba con successo, sei sano e salvo!"
-            },
-
-            "L": {
-                "message": "sei un pervertito"
+            "T": {
+                "message": "Finalmente grazie alla tenaglia riesci ad rompere la catena",
+                "transform": "I"
             }
         }
     },
+    
     "1": {
         "name": "porta",
         "description": "e' una porta",
@@ -73,8 +44,8 @@
         "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "quale porta scusa???",
-                "transform": "L"
+                "message": "si apre",
+                "move_to_room":2
             }
         }
     },
@@ -85,94 +56,115 @@
         "interactions": {
             "no-item": {
                 "message": "si apre",
-                "move_to_room": 0
+                "move_to_room": "0"
+            }
+        }
+    }, 
+    "3": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 3
+            }
+        }
+    },
+    "4": {
+        "name": "botola",
+        "description": "Una botola dal dubbio aspetto e sicurezza",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "provi ad aprirla ma senza successo"
+		},
+            "K": {
+                "message": "si apre e ti conduce nei meandri oscuri della villa",
+                "move_to_room": 4
+            }
+        }
+    }, 
+    
+       
+    "F": {
+        "name": "Fiamma ossidrica",
+        "description": "Una dolce fiamma vietata ai minori di 3 anni",
+        "color": "red",
+        "interactions": {
+            "no-item": {
+                "message": "la raccogli",
+                "transform": " ",
+                "pickup": true
+            }
+        }
+    },
+    "L": {
+        "name": "letto a baldacchino",
+        "color": "red",
+        "description": "Un letto a baldacchino comodo e avvolgente",
+        "interactions":  {
+            "S": {
+                "message":"Seguendo le indicazioni del foglietto trovi un fucile a pompa sotto il letto",
+		"transform": "P"
+                
+            }
+        }
+    },
+    "!": {
+        "name": "cassaforte",
+        "color": "red",
+        "description": "Una vecchia cassaforte arrugginita, potrebbe contenere qualcosa...",
+        "interactions":  {
+            "no-item": {
+                "message":"Ci vorrebbe qualcosa per aprirla"
+		},
+	    "P":{
+		"message":"Spari l'unico colpo che avevi contro la cassaforte che te lo fa rimbalzare in faccia mandandoti all'altro mondo",
+		"game_over":"true"
+		
+                
             }
         }
     },
     "Q": {
         "name": "quadro",
-        "description": "e' proprio un bel quadro",
-        "color": "blue",
-        "interactions": {
-            "no-item": {
-                "message": "spostando il quadro ti accorgi che dietro nasconte una cassaforte",
-                "transform": "F"
-            }
-        }
-    },
-
-    "F": {
-        "name": "cassaforte",
-        "description": "e' una cassaforte chiusa",
-        "color": "yellow",
-        "interactions": {
-            "K": {
-                "message": "la chiave entra perfettamente nella serratura; la giri",
-                "transform": "V",
-                "remove_from_inventory": true
-            }
-        }
-    },
-
-    "V": {
-        "name": "Tenaglie",
-        "description": "sono delle tenaglie piuttosto affilate",
+        "description": "un quadro antico, riesci solo a distinguere una forma umana",
         "color": "green",
-        "interactions": {
-            "no-item": {
-                "message": "le raccogli",
-                "transform": " ",
-                "pickup": true
-            }
-        }
-    },
-
-    "P": {
-        "name": "pianta",
-        "description": "questa pianta non viene annaffiata da molto tempo",
-        "color": "green",
-        "interactions": {
-            "no-item": {
-                "message": "spostando il vaso noti qualcosa di interessante",
-                "transform": "K"
-            }
-        }
-    },
-
-    "C": {
-        "name": "candelabro",
-        "description": "un vecchio candelabro arrugginito",
-        "color": "yellow",
-        "interactions": {
-            "V": {
-                "message": "mmm, ha proprio senso... abra cadabra!",
-                "transform": " ",
-                "pickup": true
-            },
+        "interactions":  {
             "C": {
-                "message": "mindfuckkkkk!!!!",
-                "transform": "U"
+                "message":"Dai fuoco al quadro accorgendoti poco dopo che potrebbe che potrebbe bruciare tutta la casa e tu con essa percio' soffi fino a quando non si spegne",
+		"transform": " "
+                
             }
         }
+},
+    
+    "P": {
+        "name": "Fucile a pompa",
+        "description": "Un fucile utile a far capire a tutti chi comanda",
+        "color": "black",
+	"interactions": {
+            "no-item": {
+                "message": "Lo prendi in mano ma ti accorgi che ha un solo proiettile",
+		"transform": " ",
+                "pickup": true
+		
+		}
+	}
     },
-
-    "U": {
-        "name": "unicorno",
-        "description": "che splendido esemplare fatato!",
-        "color": "blue",
+    "C": {
+        "name": "candela",
+        "description": "una candela accesa da poco!",
+        "color": "yellow",
         "interactions": {
             "no-item": {
-                "message": "che splendida sensazione",
-                "win": "voli via contento e vivrai una vita fatta di soddisfazioni cucciolose"
+                "message": "la raccogli stando attento a non spegnerla",
+                "transform": " ",
+                "pickup": true
+		}
+		}
             },
-
-            "L": {
-                "message": "quello che una volta  era un leggiadro  unicorno ora e' un unicorno obeso! non volera' mai piu'",
-                "game_over": "peccato!"
-            }
-        }
-    },
-
     "K": {
         "name": "chiave",
         "description": "e' una piccola chiave",
@@ -185,28 +177,88 @@
             }
         }
     },
-
-    "+": {
-        "name": "interruttore",
-        "description": "e' un interruttore posizionato su ACCESO",
+    "A": {
+        "name": "armadio",
+        "description": "un'armadio che sembra non essere aperto da anni",
+        "color": "red",
+        "interactions": {
+            "C": {
+		"message": "L'armadio prende rapidamente fuoco" 
+		}
+	}
+    },
+    "&": {
+        "name": "sturacessi",
+        "description": "Un semplice sturacessi",
+        "color": "red",
+        "interactions": {
+            "no-item": {
+		
+                "pickup": true,
+                "transform":" "
+		}
+	}
+    },
+    "K": {
+        "name": "mazzo di chiavi",
+        "description": "Tutte le chiavi tranne una sono un ammasso di ruggine...",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+		
+                "pickup": true,
+		"transform":" "
+		}
+	}
+    },  
+    "%": {
+        "name": "doccia",
+        "description": "Sembra piu' un'arma battereologica che una doccia",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+		"message": "Hai trovato uno splendido sturacessi e probabilmente hai preso il tetano", 
+		"transform": "&"
+		}
+	}
+    },
+    "G": {
+        "name": "gabinetto",
+        "description": "Un semplice gabinetto che sicuramente non ti portera' in un altra dimensione",
         "color": "black",
+        "interactions": {   
+            "&":{
+                "message":"Grazie allo sturacessi il livello dell'acqua si abbassa e intravedi un mazzo di chiavi",
+		"transform":"K"
+           },
+           "no-item": { 
+                "message": "Questo gabinetto non viene toccato da anni e l'acqua ha ormai raggiunto il bordo, sara' meglio non usarlo..."
+            }
+		
+        }
+        
+    },
+    "V": {
+        "name": "finestra di vetro",
+        "description": "Una grande finestra che da sul giardino, non sembra troppo resistente...",
+        "color": "blue",
         "interactions": {
             "no-item": { 
-                "message": "lo premi",
-                "transform": "-"
+                "message": "Sperando di scappare dal giardino rompi la finestra e ti butti senza calcolare la sua altezza e ti sfracelli al suolo",
+		"game_over":"true"
             }
         }
-    },
-
-    "-": {
-        "name": "interruttore",
-        "description": "e' un interruttore posizionato su SPENTO",
-        "color": "black",
+},
+    "N": {
+        "name": "foglio di carta",
+        "description": "un foglietto con qualche scarabocchio",
+        "color": "green",
         "interactions": {
             "no-item": { 
-                "message": "lo premi",
-                "transform": "+"
+                "message": "...Non sono mai riuscito a dormire tranquillo ma con LUI sotto di me mi sentivo sicuro...",
+		"transform": " ",
+		"pickup": true
             }
-        }  
+        }
     }
 }
