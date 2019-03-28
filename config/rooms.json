@@ -8,7 +8,7 @@
     "1": {
         "name": "Stanza da letto",
         "description": "Una semplice stanza spoglia con un letto e due armadi",
-        "color": "white"
+        "color": "magenta"
     },
     
     "2": {
@@ -18,7 +18,22 @@
     },
     "3": {
         "name": "Salotto",
-        "description": "Un salotto in cui nessuno mette piede da anni",
+        "description": "Un salotto ampio e signorile",
         "color": "white"
+    },
+    "4": {
+        "name": "Cantina",
+        "description": "Una cantina lugubre e marcia",
+        "color": "white"
+    },
+    "5": {
+        "name": "Giardino",
+        "description": "Un giardino in cui nessuno mette piede da anni",
+        "color": "green"
+    }
+    "6": {
+        "name": "Inferno",
+        "description": "Ops sei finito all'inferno!",
+        "color": "red"
     }
 }

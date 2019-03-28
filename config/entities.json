@@ -1,31 +1,33 @@
 {
-    "I": {
+   "I": {
         "name": "ingresso",
         "color": "green",
         "description": "La porta d'ingresso della villa",
         "interactions":  {
             "no-item": {
-                "message":"la apri lentamente accompagnato da un lungo stridio",
-                "move_to_room": 1
+                "message":"la apri lentamente accompagnato da un lungo stridio ed esci dalla villa!",
+                "win":"true"
             }
         }
-    },
-      
-      
-    "?": {
+    }, 
+    "-": {
         "name": "catena",
-        "description": "e' la porta d'ingresso alla villa ma e' stata chiusa con una catena di metallo",
-        "color": "red",
+        "description": "La porta d'ingresso alla villa e' stata chiusa con una catena di metallo",
+        "color": "red"
+	,
         "interactions": {
             "no-item": {
                 "message": "Non vedi nessun lucchetto in cui inserire una chiave"
-            },
-            "T": {
-                "message": "Finalmente grazie alla tenaglia riesci ad rompere la catena",
+	    },
+            "F": {
+                "message": "Stando attento a non dar fuoco a tutta la casa riesci a sciogliere ",
                 "transform": "I"
+     
             }
         }
-    },
+    },  
+      
+    
     
     "1": {
         "name": "porta",
@@ -56,7 +58,7 @@
         "interactions": {
             "no-item": {
                 "message": "si apre",
-                "move_to_room": "0"
+                "move_to_room": 0
             }
         }
     }, 
@@ -85,7 +87,17 @@
             }
         }
     }, 
-    
+    "5": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 5
+            }
+        }
+    },
        
     "F": {
         "name": "Fiamma ossidrica",
@@ -104,16 +116,33 @@
         "color": "red",
         "description": "Un letto a baldacchino comodo e avvolgente",
         "interactions":  {
-            "S": {
+            "N": {
                 "message":"Seguendo le indicazioni del foglietto trovi un fucile a pompa sotto il letto",
+	        "remove_from_inventory":"true",
 		"transform": "P"
+                
+            }
+        }
+    },
+    "/": {
+        "name": "assi di legno",
+        "color": "red",
+        "description": "Queste assi bloccano la porta tuttavia non sembrano resistenti",
+        "interactions":  {
+            "no-item": {
+                "message":"Provi a romperle con un calcio ma non succede niente"
+		},
+	    "P": {
+		"message":"Grazie al pompa si sfracellano in mille pezzi",
+		"remove_from_inventory":"true",
+		"transform": "5"
                 
             }
         }
     },
     "!": {
         "name": "cassaforte",
-        "color": "red",
+        "color": "cyan",
         "description": "Una vecchia cassaforte arrugginita, potrebbe contenere qualcosa...",
         "interactions":  {
             "no-item": {
@@ -122,8 +151,11 @@
 	    "P":{
 		"message":"Spari l'unico colpo che avevi contro la cassaforte che te lo fa rimbalzare in faccia mandandoti all'altro mondo",
 		"game_over":"true"
-		
-                
+		},
+	    "*": {
+		"message": "Ovviamente il codice sopra al foglio corrisponde alla combinazione per aprire la cassaforte e al suo interno trovi una fiamma ossidrica che sembra essere stata messa lì da poco",	
+		"transform":"F"   
+		  
             }
         }
     },
@@ -165,15 +197,31 @@
 		}
 		}
             },
-    "K": {
-        "name": "chiave",
-        "description": "e' una piccola chiave",
-        "color": "yellow",
+    "R": {
+        "name": "recinto",
+        "description": "tutto il giardino e' recintato, da qua e' impossibile scappare...",
+        "color": "white"
+            },
+     "*": {
+        "name": "password",
+        "description": "un foglietto accartocciato con quattro numeri",
+        "color": "black",
         "interactions": {
             "no-item": {
-                "message": "la raccogli",
+                "message": "lo raccogli dal fondo della fontana",
                 "transform": " ",
                 "pickup": true
+		}
+		}
+            },
+    "^": {
+        "name": "fontana",
+        "description": "Un tempo doveva essere una fantastica fontana ma ora e' rimasta senz'acqua",
+        "color": "cyan",
+        "interactions": {
+            "no-item": {
+                "message": "noti un foglietto di carta nel fondo di essa",
+                "transform": "*"
             }
         }
     },
@@ -183,7 +231,19 @@
         "color": "red",
         "interactions": {
             "C": {
-		"message": "L'armadio prende rapidamente fuoco" 
+		"message": "L'armadio prende rapidamente fuoco" ,
+		"transform": "?"
+		}
+	}
+    },
+    "?": {
+        "name": "fuoco",
+        "description": "Il fuoco e' divampato",
+        "color": "red",
+        "interactions": {
+            "P": {
+		"message": "Sparando al fuoco compare un portale che ti trasporta in un'altra dimensione nella quale vivrai in pace e armonia con gli animali" ,
+		"move_to_room":6
 		}
 	}
     },
@@ -229,7 +289,8 @@
         "interactions": {   
             "&":{
                 "message":"Grazie allo sturacessi il livello dell'acqua si abbassa e intravedi un mazzo di chiavi",
-		"transform":"K"
+		"transform":"K",
+		"remove_from_inventory":"true"
            },
            "no-item": { 
                 "message": "Questo gabinetto non viene toccato da anni e l'acqua ha ormai raggiunto il bordo, sara' meglio non usarlo..."
