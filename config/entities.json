@@ -1,4 +1,9 @@
 {
+    "X":  {
+        "name": "cartaccia",
+        "description": "assolutamente inutile",
+        "color": "magenta"
+    },
     "O": {
         "name": "coccinella",
         "color": "red",
@@ -7,6 +12,10 @@
             "no-item": {
                 "message": "la schiacci",
                 "transform": " "
+            },
+            "L": {
+                "message": "vacca se mangia...",
+                "transform": "U"
             }
         }
     },
