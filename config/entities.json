@@ -1,5 +1,5 @@
 {
-   "I": {
+    "I": {
         "name": "ingresso",
         "color": "green",
         "description": "La porta d'ingresso della villa",
@@ -98,7 +98,6 @@
             }
         }
     },
-       
     "F": {
         "name": "Fiamma ossidrica",
         "description": "Una dolce fiamma vietata ai minori di 3 anni",
@@ -110,7 +109,8 @@
                 "pickup": true
             }
         }
-    },
+    },   
+    
     "L": {
         "name": "letto a baldacchino",
         "color": "red",
@@ -118,8 +118,8 @@
         "interactions":  {
             "N": {
                 "message":"Seguendo le indicazioni del foglietto trovi un fucile a pompa sotto il letto",
-	        "remove_from_inventory":"true",
-		"transform": "P"
+		"transform": "P",
+		"remove_from_inventory": true
                 
             }
         }
@@ -133,9 +133,10 @@
                 "message":"Provi a romperle con un calcio ma non succede niente"
 		},
 	    "P": {
-		"message":"Grazie al pompa si sfracellano in mille pezzi",
-		"remove_from_inventory":"true",
-		"transform": "5"
+		"message": "Grazie al pompa si sfracellano in mille pezzi",
+                "transform": "5",
+                "remove_from_inventory": true
+		
                 
             }
         }
@@ -149,16 +150,18 @@
                 "message":"Ci vorrebbe qualcosa per aprirla"
 		},
 	    "P":{
-		"message":"Spari l'unico colpo che avevi contro la cassaforte che te lo fa rimbalzare in faccia mandandoti all'altro mondo",
+		"message":"Spari l'unico colpo che avevi contro la cassaforte che ddtte lo fa rimbalzare in faccia mandandoti all'altro mondo",
 		"game_over":"true"
 		},
 	    "*": {
 		"message": "Ovviamente il codice sopra al foglio corrisponde alla combinazione per aprire la cassaforte e al suo interno trovi una fiamma ossidrica che sembra essere stata messa lì da poco",	
-		"transform":"F"   
+		"transform":"F",
+		"remove_from_inventory": true   
 		  
             }
         }
     },
+    
     "Q": {
         "name": "quadro",
         "description": "un quadro antico, riesci solo a distinguere una forma umana",
@@ -166,12 +169,12 @@
         "interactions":  {
             "C": {
                 "message":"Dai fuoco al quadro accorgendoti poco dopo che potrebbe che potrebbe bruciare tutta la casa e tu con essa percio' soffi fino a quando non si spegne",
-		"transform": " "
+		"transform": " ",
+		"remove_from_inventory": true
                 
             }
         }
 },
-    
     "P": {
         "name": "Fucile a pompa",
         "description": "Un fucile utile a far capire a tutti chi comanda",
@@ -232,7 +235,8 @@
         "interactions": {
             "C": {
 		"message": "L'armadio prende rapidamente fuoco" ,
-		"transform": "?"
+		"transform": "?",
+		"remove_from_inventory": true
 		}
 	}
     },
@@ -290,7 +294,7 @@
             "&":{
                 "message":"Grazie allo sturacessi il livello dell'acqua si abbassa e intravedi un mazzo di chiavi",
 		"transform":"K",
-		"remove_from_inventory":"true"
+		"remove_from_inventory": true
            },
            "no-item": { 
                 "message": "Questo gabinetto non viene toccato da anni e l'acqua ha ormai raggiunto il bordo, sara' meglio non usarlo..."
@@ -313,7 +317,7 @@
     "N": {
         "name": "foglio di carta",
         "description": "un foglietto con qualche scarabocchio",
-        "color": "green",
+        "color": "black",
         "interactions": {
             "no-item": { 
                 "message": "...Non sono mai riuscito a dormire tranquillo ma con LUI sotto di me mi sentivo sicuro...",
