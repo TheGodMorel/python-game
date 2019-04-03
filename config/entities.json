@@ -306,7 +306,7 @@
         "interactions": {
             "no-item": { 
                 "message": "Sperando di scappare dal giardino rompi la finestra e ti butti senza calcolare la sua altezza e ti sfracelli al suolo",
-		"game_over":"true"
+		"game_over": true
             }
         }
 },
