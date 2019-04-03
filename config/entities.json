@@ -1,5 +1,5 @@
 {
-   "I": {
+    "I": {
         "name": "ingresso",
         "color": "green",
         "description": "La porta d'ingresso della villa",
@@ -14,11 +14,11 @@
         "name": "catena",
         "description": "La porta d'ingresso alla villa e' stata chiusa con una catena di metallo",
         "color": "red"
-	,
+    ,
         "interactions": {
             "no-item": {
                 "message": "Non vedi nessun lucchetto in cui inserire una chiave"
-	    },
+        },
             "F": {
                 "message": "Stando attento a non dar fuoco a tutta la casa riesci a sciogliere ",
                 "transform": "I"
@@ -80,7 +80,7 @@
         "interactions": {
             "no-item": {
                 "message": "provi ad aprirla ma senza successo"
-		},
+        },
             "K": {
                 "message": "si apre e ti conduce nei meandri oscuri della villa",
                 "move_to_room": 4
@@ -98,7 +98,6 @@
             }
         }
     },
-       
     "F": {
         "name": "Fiamma ossidrica",
         "description": "Una dolce fiamma vietata ai minori di 3 anni",
@@ -110,7 +109,8 @@
                 "pickup": true
             }
         }
-    },
+    },   
+    
     "L": {
         "name": "letto a baldacchino",
         "color": "red",
@@ -118,8 +118,8 @@
         "interactions":  {
             "N": {
                 "message":"Seguendo le indicazioni del foglietto trovi un fucile a pompa sotto il letto",
-	        "remove_from_inventory":"true",
-		"transform": "P"
+        "transform": "P",
+        "remove_from_inventory": true
                 
             }
         }
@@ -131,11 +131,12 @@
         "interactions":  {
             "no-item": {
                 "message":"Provi a romperle con un calcio ma non succede niente"
-		},
-	    "P": {
-		"message":"Grazie al pompa si sfracellano in mille pezzi",
-		"remove_from_inventory":"true",
-		"transform": "5"
+        },
+        "P": {
+        "message": "Grazie al pompa si sfracellano in mille pezzi",
+                "transform": "5",
+                "remove_from_inventory": true
+        
                 
             }
         }
@@ -147,18 +148,20 @@
         "interactions":  {
             "no-item": {
                 "message":"Ci vorrebbe qualcosa per aprirla"
-		},
-	    "P":{
-		"message":"Spari l'unico colpo che avevi contro la cassaforte che te lo fa rimbalzare in faccia mandandoti all'altro mondo",
-		"game_over":"true"
-		},
-	    "*": {
-		"message": "Ovviamente il codice sopra al foglio corrisponde alla combinazione per aprire la cassaforte e al suo interno trovi una fiamma ossidrica che sembra essere stata messa lì da poco",	
-		"transform":"F"   
-		  
+        },
+        "P":{
+        "message":"Spari l'unico colpo che avevi contro la cassaforte che ddtte lo fa rimbalzare in faccia mandandoti all'altro mondo",
+        "game_over":"true"
+        },
+        "*": {
+        "message": "Ovviamente il codice sopra al foglio corrisponde alla combinazione per aprire la cassaforte e al suo interno trovi una fiamma ossidrica che sembra essere stata messa lì da poco",  
+        "transform":"F",
+        "remove_from_inventory": true   
+          
             }
         }
     },
+    
     "Q": {
         "name": "quadro",
         "description": "un quadro antico, riesci solo a distinguere una forma umana",
@@ -166,24 +169,24 @@
         "interactions":  {
             "C": {
                 "message":"Dai fuoco al quadro accorgendoti poco dopo che potrebbe che potrebbe bruciare tutta la casa e tu con essa percio' soffi fino a quando non si spegne",
-		"transform": " "
+        "transform": " ",
+        "remove_from_inventory": true
                 
             }
         }
 },
-    
     "P": {
         "name": "Fucile a pompa",
         "description": "Un fucile utile a far capire a tutti chi comanda",
         "color": "black",
-	"interactions": {
+    "interactions": {
             "no-item": {
                 "message": "Lo prendi in mano ma ti accorgi che ha un solo proiettile",
-		"transform": " ",
+        "transform": " ",
                 "pickup": true
-		
-		}
-	}
+        
+        }
+    }
     },
     "C": {
         "name": "candela",
@@ -194,8 +197,8 @@
                 "message": "la raccogli stando attento a non spegnerla",
                 "transform": " ",
                 "pickup": true
-		}
-		}
+        }
+        }
             },
     "R": {
         "name": "recinto",
@@ -211,8 +214,8 @@
                 "message": "lo raccogli dal fondo della fontana",
                 "transform": " ",
                 "pickup": true
-		}
-		}
+        }
+        }
             },
     "^": {
         "name": "fontana",
@@ -231,10 +234,11 @@
         "color": "red",
         "interactions": {
             "C": {
-		"message": "L'armadio prende rapidamente fuoco" ,
-		"transform": "?"
-		}
-	}
+        "message": "L'armadio prende rapidamente fuoco" ,
+        "transform": "?",
+        "remove_from_inventory": true
+        }
+    }
     },
     "?": {
         "name": "fuoco",
@@ -242,10 +246,10 @@
         "color": "red",
         "interactions": {
             "P": {
-		"message": "Sparando al fuoco compare un portale che ti trasporta in un'altra dimensione nella quale vivrai in pace e armonia con gli animali" ,
-		"move_to_room":6
-		}
-	}
+        "message": "Sparando al fuoco compare un portale che ti trasporta in un'altra dimensione nella quale vivrai in pace e armonia con gli animali" ,
+        "move_to_room":6
+        }
+    }
     },
     "&": {
         "name": "sturacessi",
@@ -253,11 +257,11 @@
         "color": "red",
         "interactions": {
             "no-item": {
-		
+        
                 "pickup": true,
                 "transform":" "
-		}
-	}
+        }
+    }
     },
     "K": {
         "name": "mazzo di chiavi",
@@ -265,11 +269,11 @@
         "color": "green",
         "interactions": {
             "no-item": {
-		
+        
                 "pickup": true,
-		"transform":" "
-		}
-	}
+        "transform":" "
+        }
+    }
     },  
     "%": {
         "name": "doccia",
@@ -277,10 +281,10 @@
         "color": "blue",
         "interactions": {
             "no-item": {
-		"message": "Hai trovato uno splendido sturacessi e probabilmente hai preso il tetano", 
-		"transform": "&"
-		}
-	}
+        "message": "Hai trovato uno splendido sturacessi e probabilmente hai preso il tetano", 
+        "transform": "&"
+        }
+    }
     },
     "G": {
         "name": "gabinetto",
@@ -289,13 +293,13 @@
         "interactions": {   
             "&":{
                 "message":"Grazie allo sturacessi il livello dell'acqua si abbassa e intravedi un mazzo di chiavi",
-		"transform":"K",
-		"remove_from_inventory":"true"
+        "transform":"K",
+        "remove_from_inventory": true
            },
            "no-item": { 
                 "message": "Questo gabinetto non viene toccato da anni e l'acqua ha ormai raggiunto il bordo, sara' meglio non usarlo..."
             }
-		
+        
         }
         
     },
@@ -306,19 +310,19 @@
         "interactions": {
             "no-item": { 
                 "message": "Sperando di scappare dal giardino rompi la finestra e ti butti senza calcolare la sua altezza e ti sfracelli al suolo",
-		"game_over": true
+        "game_over":"true"
             }
         }
 },
     "N": {
         "name": "foglio di carta",
         "description": "un foglietto con qualche scarabocchio",
-        "color": "green",
+        "color": "black",
         "interactions": {
             "no-item": { 
                 "message": "...Non sono mai riuscito a dormire tranquillo ma con LUI sotto di me mi sentivo sicuro...",
-		"transform": " ",
-		"pickup": true
+        "transform": " ",
+        "pickup": true
             }
         }
     }
