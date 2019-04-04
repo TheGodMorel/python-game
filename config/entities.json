@@ -20,8 +20,13 @@
                 "message": "Non vedi nessun lucchetto in cui inserire una chiave"
 	    },
             "F": {
-                "message": "Stando attento a non dar fuoco a tutta la casa riesci a sciogliere ",
+                "message": "Stando attento a non dar fuoco a tutta la casa riesci a sciogliere la catena",
                 "transform": "I"
+     
+            },
+             "P": {
+                "message": "Spari contro la catena con il fucile ma il colpo rimbalza e ti trafigge là dove non batte il sole, muori tra atroci dolori",
+                "game_over":"true"
      
             }
         }
@@ -74,16 +79,27 @@
         }
     },
     "4": {
-        "name": "botola",
-        "description": "Una botola dal dubbio aspetto e sicurezza",
+        "name": "porta",
+        "description": "e' una porta",
         "color": "blue",
         "interactions": {
             "no-item": {
+                "message": "si apre",
+                "move_to_room": 4
+            }
+        }
+    }, 
+    "B": {
+        "name": "botola",
+        "description": "Una botola dal dubbio aspetto e sicurezza",
+        "color": "magenta",
+        "interactions": {
+            "no-item": {
                 "message": "provi ad aprirla ma senza successo"
-		},
+        },
             "K": {
                 "message": "si apre e ti conduce nei meandri oscuri della villa",
-                "move_to_room": 4
+                "transform": 4
             }
         }
     }, 
@@ -143,7 +159,7 @@
     },
     "!": {
         "name": "cassaforte",
-        "color": "cyan",
+        "color": "yellow",
         "description": "Una vecchia cassaforte arrugginita, potrebbe contenere qualcosa...",
         "interactions":  {
             "no-item": {
@@ -228,8 +244,8 @@
             }
         }
     },
-    "A": {
-        "name": "armadio",
+    "Y": {
+        "name": "armadio (abbiamo finito le lettere sensate)",
         "description": "un'armadio che sembra non essere aperto da anni",
         "color": "red",
         "interactions": {
