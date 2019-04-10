@@ -13,8 +13,7 @@
     "-": {
         "name": "catena",
         "description": "La porta d'ingresso alla villa e' stata chiusa con una catena di metallo",
-        "color": "red"
-    ,
+        "color": "red",
         "interactions": {
             "no-item": {
                 "message": "Non vedi nessun lucchetto in cui inserire una chiave"
@@ -107,6 +106,54 @@
                 "message":" ti provi ad avvicinare ma una vampata di calore ti fa cambiare idea"
             }
 
+        }
+    },
+    "H":{
+        "name" :"Lucifero",
+        "description":" una creatura altamente pericolosa che custodisce un TESORO ",
+        "color" :"black",
+        "interactions":{
+            "no-item": {
+                "message" : "lo colpisci a mani nude  inutilmente e il mostro ti trafigge con la sua lancia",
+                "game_over":"true"
+            },
+        "P":{
+        "message":"il colpo che hai sparato viene fermato dalla potente  corazza del mostro...Ti serve qualcosa di più POTENTE "
+            },
+        "Z":{
+            "message":"usando la magica spada trafiggi Lucifero che lentamente casca a terra morente ... vedi qualcosa dietro di lui..una fiamma ossidrica ",
+            "transform":"F",
+            "remove_from_inventory":true
+        }
+        }
+
+    },
+    "E":{
+        "name":"energy drink",
+        "description" : "energy drink contenente un concentrato di vitamine e proteine",
+        "color":"red",
+        "interactions":{
+            "no-item":{
+                "message":" lo raccogli da terra  ",
+                "pickup":true ,
+        "transform": " "
+            }
+        }
+    },
+    "Z":{
+        "name":"z-sword",
+        "description":"una spada leggendaria che si crede sia stata usata da Carlo Magno in persona..",
+        "color":"yellow",
+        "interactions":{
+            "no-item":{
+                "message" : "provi a estrarre la spada conficcata nel muro ma non ci riesci"
+            },
+        "E":{
+            "message":"bevendo l'energy drink riesci ad ottenere una forza micidiale e estrai la spada dal muro ",
+            "pickup": true,
+            "transform": " ",
+            "remove_from_inventory":true
+            }
         }
     },
     "F": {
