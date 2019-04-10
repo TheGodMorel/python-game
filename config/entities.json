@@ -98,6 +98,17 @@
             }
         }
     },
+    "6": {
+        "name":"portale per l'inferno",
+        "description" :"un portale misterioso e alquanto inquietante",
+        "color" : "blue",
+        "interactions" : {
+            "no-item" : {
+                "message":" ti provi ad avvicinare ma una vampata di calore ti fa cambiare idea"
+            }
+
+        }
+    },
     "F": {
         "name": "Fiamma ossidrica",
         "description": "Una dolce fiamma vietata ai minori di 3 anni",
