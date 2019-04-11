@@ -19,8 +19,13 @@
                 "message": "Non vedi nessun lucchetto in cui inserire una chiave"
         },
             "F": {
-                "message": "Stando attento a non dar fuoco a tutta la casa riesci a sciogliere ",
+                "message": "Stando attento a non dar fuoco a tutta la casa riesci a sciogliere la catena",
                 "transform": "I"
+     
+            },
+             "P": {
+                "message": "Spari contro la catena con il fucile ma il colpo rimbalza e ti trafigge là dove non batte il sole, muori tra atroci dolori",
+                "game_over":"true"
      
             }
         }
@@ -73,16 +78,27 @@
         }
     },
     "4": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 4
+            }
+        }
+    }, 
+    "B": {
         "name": "botola",
         "description": "Una botola dal dubbio aspetto e sicurezza",
-        "color": "blue",
+        "color": "magenta",
         "interactions": {
             "no-item": {
                 "message": "provi ad aprirla ma senza successo"
         },
             "K": {
                 "message": "si apre e ti conduce nei meandri oscuri della villa",
-                "move_to_room": 4
+                "transform": 4
             }
         }
     }, 
@@ -97,6 +113,7 @@
             }
         }
     },
+
     "6": {
         "name":"portale per l'inferno",
         "description" :"un portale misterioso e alquanto inquietante",
@@ -117,9 +134,6 @@
                 "message" : "lo colpisci a mani nude  inutilmente e il mostro ti trafigge con la sua lancia",
                 "game_over":"true"
             },
-        "P":{
-        "message":"il colpo che hai sparato viene fermato dalla potente  corazza del mostro...Ti serve qualcosa di più POTENTE "
-            },
         "Z":{
             "message":"usando la magica spada trafiggi Lucifero che lentamente casca a terra morente ... vedi qualcosa dietro di lui..una fiamma ossidrica ",
             "transform":"F",
@@ -129,7 +143,7 @@
 
     },
     "E":{
-        "name":"energy drink",
+        "name":"Monster Energy",
         "description" : "energy drink contenente un concentrato di vitamine e proteine",
         "color":"red",
         "interactions":{
@@ -141,8 +155,8 @@
         }
     },
     "Z":{
-        "name":"z-sword",
-        "description":"una spada leggendaria che si crede sia stata usata da Carlo Magno in persona..",
+        "name":"Durendala",
+        "description":"una spada leggendaria che si crede sia stata usata da Orlando in persona..",
         "color":"yellow",
         "interactions":{
             "no-item":{
@@ -177,8 +191,7 @@
             "N": {
                 "message":"Seguendo le indicazioni del foglietto trovi un fucile a pompa sotto il letto",
         "transform": "P",
-        "remove_from_inventory": true
-                
+        "remove_from_inventory": true                
             }
         }
     },
@@ -201,11 +214,12 @@
     },
     "!": {
         "name": "cassaforte",
-        "color": "cyan",
+        "color": "yellow",
         "description": "Una vecchia cassaforte arrugginita, potrebbe contenere qualcosa...",
         "interactions":  {
             "no-item": {
                 "message":"Ci vorrebbe qualcosa per aprirla"
+
         },
         "P":{
         "message":"Spari l'unico colpo che avevi contro la cassaforte che ddtte lo fa rimbalzare in faccia mandandoti all'altro mondo",
@@ -216,6 +230,7 @@
         "transform":"F",
         "remove_from_inventory": true   
           
+
             }
         }
     },
@@ -227,8 +242,10 @@
         "interactions":  {
             "C": {
                 "message":"Dai fuoco al quadro accorgendoti poco dopo che potrebbe che potrebbe bruciare tutta la casa e tu con essa percio' soffi fino a quando non si spegne",
+
         "transform": " ",
         "remove_from_inventory": true
+
                 
             }
         }
@@ -286,8 +303,8 @@
             }
         }
     },
-    "A": {
-        "name": "armadio",
+    "Y": {
+        "name": "armadio (abbiamo finito le lettere sensate)",
         "description": "un'armadio che sembra non essere aperto da anni",
         "color": "red",
         "interactions": {
@@ -297,6 +314,7 @@
         "remove_from_inventory": true
         }
     }
+
     },
     "?": {
         "name": "fuoco",
@@ -351,8 +369,10 @@
         "interactions": {   
             "&":{
                 "message":"Grazie allo sturacessi il livello dell'acqua si abbassa e intravedi un mazzo di chiavi",
+
         "transform":"K",
         "remove_from_inventory": true
+
            },
            "no-item": { 
                 "message": "Questo gabinetto non viene toccato da anni e l'acqua ha ormai raggiunto il bordo, sara' meglio non usarlo..."
